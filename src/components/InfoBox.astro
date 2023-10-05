@@ -1,18 +1,21 @@
 ---
-const { header, text } = Astro.props;
----
+const { header, items = [] } = Astro.props;
 
+---
 <div class="info-box">
   <h4 class="facts_container toggle-info">
     {header}
     <img src="/angle-small-down.png" class="arrow-icon" />
   </h4>
   <div class="info-content hidden">
-    <p>{text}</p>
+    <ul>
+      {items.map((item, index) => (
+        <li key={index}>{item}</li>
+      ))}
+    </ul>
   </div>
+  
 </div>
-
-
 
 
 <script>
@@ -28,7 +31,5 @@ document.addEventListener("DOMContentLoaded", function () {
 </script>
 
 <style>
-  .info-content {
-    
-  }
+ 
 </style>
