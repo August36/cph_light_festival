@@ -52,7 +52,7 @@ main {
   top: 100%;
   left: 0;
   width: 100%;
-  background-color: white;
+  background-color: #202023;
   display: none;
   transition: opacity 0.3s ease-in-out; 
 }
@@ -71,5 +71,32 @@ main {
   pointer-events: auto; 
 }
 
-/* MESH 4 */
+/* Your existing CSS rules */
 
+/* Add a media query for screens with a maximum width of 768px (adjust this value as needed) */
+@media (max-width: 768px) {
+  .main_grid_container {
+    grid-template-rows: repeat(12, 1fr);
+    grid-template-columns: repeat(1, 1fr); /* Change to a single column layout */
+  }
+
+  .text-container {
+    margin-right: 20px;
+    text-align: right; /* Center-align text on smaller screens */
+    grid-column: 1 / -1; /* Expand to full width on smaller screens */
+    
+  }
+.text-container p {
+  font-size: 1.4rem;
+}
+
+  .dropdown-container {
+    margin-left: 20px;
+    text-align: left; /* Center-align text on smaller screens */
+    grid-column: 1 / -1; /* Expand to full width on smaller screens */
+  }
+
+  .dropdown-container h4 {
+    font-size: 1.6rem;
+  }
+}
