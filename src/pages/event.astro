@@ -1,5 +1,6 @@
 ---
 import Nav from "../components/Nav.astro"
+import EventCard from "../components/EventCard.astro"
 ---
 
 <html lang="en">
@@ -16,16 +17,18 @@ import Nav from "../components/Nav.astro"
 			<Nav />
 		</header>
 		<main>
-			<img src="" alt="">
-			<h3>event navn</h3>
-			<h4>artist navn</h4>
-			<p>event info</p>
-			<p>artist info</p>
-			<p>additional info</p>
-			<h4>artist website</h4>
-			<h4>artist SoMe</h4>
-			<p>Credits</p>
-
+			<EventCard
+				eventName="Acid Sun"
+				artistName="Hans E. Madsen"
+				eventInfo='Living images of light are created here. Lamps never see their own shadows.'
+				artistInfo='Hans E. Madsen is a Danish artist, who has created location specific light installations in public spaces, gallery windows and storefronts since 1995. Hans E. Madsen participated in Copenhagen Light Festival 2022 with his installation “Comms” and in 2021 with the installation “Pressure”, both of which were created in collaboration with Frederik D. Hougs. He also took part in the festival in 2020 with a sculpture called “BÅD” (BOAT) and in 2019 with the installation “A Light Garden”, both of which were located at Knasten in Havnegade.'
+				additionalInfo=""
+				artistWebsite="www.hansemadsen.com"
+				artistSoMe="Instagram: hansemadsen"
+				credits="Thanks to The Danish Arts Foundation The Danish Art Workshops"
+			>
+			<img style="width: 700px;" src="/imgs/acidsun.webp" alt="Acid Sun installation">
+			</EventCard>
 		</main>
 		<footer></footer>
 	</body>

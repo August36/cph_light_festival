@@ -1,0 +1,42 @@
+---
+const {eventName, artistName, eventInfo, artistInfo, additionalInfo, artistWebsite, artistSoMe, credits} = Astro.props;
+---
+
+<article>
+    <div class="event-text-container">
+        <slot />
+        <h3>{eventName}</h3>
+        <h4>{artistName}</h4>
+        <p>{eventInfo}</p>
+        <p>{artistInfo}</p>
+        <p>{additionalInfo}</p>
+        <p>{artistWebsite}</p>
+        <p>{artistSoMe}</p>
+        <p>{credits}</p>
+    </div>
+</article>
+
+<style>
+    h3, h4, p{
+        margin: 20px 0;
+    }
+
+    slot{
+        width: 700px;
+    }
+    .img-container{
+        display: flex;
+        justify-content: center;
+        padding-top: 50px;
+    }
+    article{
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        margin-top: 30px;
+    }
+
+    .event-text-container{
+        max-width: 700px;
+    }
+</style>
