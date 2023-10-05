@@ -1,0 +1,102 @@
+<footer class="footer">
+    <div class="footer-languages">
+      <span>Dansk</span>
+      <span>English</span>
+    </div>
+    <div class="footer-icons">
+      <a href="https://www.instagram.com/cphlightfest/?hl=da"><img src="/Instagram_logo.png" class="instagram" /></a>
+      <a href="https://www.facebook.com/cphlightfest/?locale=da_DK"><img src="Facebookicon.png" class="facebook" /></a>
+    </div>
+  </footer>
+  
+
+<style>
+  .footer-icons {
+    margin-right: 30px;
+
+    cursor: pointer;
+  }
+
+  .facebook {
+    width: 40px;
+    opacity: 70%;
+  }
+  .facebook:hover {
+    opacity: 100%;
+    transition: 0.4s;
+  }
+
+  .instagram {
+    width: 40px;
+    margin-right: 20px;
+    opacity: 70%;
+  }
+  .instagram:hover {
+    opacity: 100%;
+    transition: 0.4s;
+  }
+
+  .footer {
+    position: fixed; 
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: rgba(18, 21, 35, 0.4);
+    color: #aaaec7;
+    padding: 10px;
+    text-align: center;
+    font-family: "loos-wide", sans-serif;
+    font-weight: 100;
+    font-style: normal;
+    font-size: 1.4rem;
+  }
+
+  .footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  .footer-icons {
+  }
+
+  .footer-languages {
+    margin-left: 20px;
+  }
+  .footer-languages span {
+    margin: 10px;
+  }
+
+  .footer-languages span:hover {
+    transition: color 0.2s;
+    color: #ec9a3b;
+    cursor: pointer;
+  }
+
+  @media (max-width: 768px) {
+    .footer {
+      background-color: rgb(18, 21, 35);
+    }
+
+    .footer-icons {
+      margin-right: 10px;
+      cursor: pointer;
+    }
+
+    .footer-languages {
+      margin-left: 10px;
+    }
+
+    .footer-languages span {
+      margin: 8px;
+      font-size: 1.2rem;
+    }
+
+    .facebook {
+      width: 30px;
+    }
+    .instagram {
+      width: 30px;
+    }
+  }
+</style>
