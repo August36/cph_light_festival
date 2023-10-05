@@ -6,14 +6,20 @@ main {
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  height: vh;
   margin: 0;
   padding: 0;
+  overflow: hidden;
+  text-align: center;
+  
 }
 
 
-main {
-  text-align: center;
+li {
+  font-family: "loos-wide", sans-serif;
+font-weight: 100;
+font-style: normal;
+color: #E0EBF9;
+font-size: 1.6rem;
 }
 
 .cphlightfest_title_container {
@@ -51,12 +57,21 @@ main {
   position: absolute;
   top: 100%;
   left: 0;
-  width: 100%;
+  width: 80%;
   background-color: #202023;
   display: none;
-  transition: opacity 0.3s ease-in-out; 
+  margin-top: 6px;
+  margin-bottom: 10px; 
+  padding: 10px 20px 10px 20px;
+  padding-left: 30px;
+  z-index: 100;
+  
 }
 
+.info-content li {
+  font-size: 1.2rem;
+  margin: 10px;
+}
 
 .info-content.hidden {
   
@@ -70,6 +85,10 @@ main {
   opacity: 1; 
   pointer-events: auto; 
 }
+
+
+
+
 
 /* Your existing CSS rules */
 

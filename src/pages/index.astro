@@ -3,6 +3,7 @@ import Nav from "../components/Nav.astro";
 import Video from "../components/Video.astro";
 import InfoBox from "../components/InfoBox.astro";
 import CphLightFestTitle from "../components/CphLightFestTitle.astro";
+import TextContent from "../components/TextContent.astro";
 import "../styles/style.css";
 import "../styles/index.css";
 ---
@@ -21,6 +22,7 @@ import "../styles/index.css";
       <Nav />
     </header>
     <main>
+      
       <!-- Forside video -->
 
       <Video />
@@ -30,38 +32,28 @@ import "../styles/index.css";
       <CphLightFestTitle />
 
       <div class="main_grid_container">
-        <div class="text-container">
-          <p>
-            February, the coldest, darkest month. <br>in the midst of the wild,
-            stormy and gloomy Scandinavian winter.<br>Folks gather inside to hide
-            away <br>While we are lighting up Copenhagen <br>To show you our beautiful
-            city <br>From it's darkest place.
-          </p>
-        </div>
+        <TextContent />
 
         <div class="dropdown-container">
           <InfoBox
             header="Facts about Copenhagen Light Festival"
-            text={`
-    This is the 6th time the festival is being held.
-
-    In 2021, the festival attracted 500.000 visitors, which makes it the most visited festival in Denmark.
-
-    The festival features more than 55 installations, pop-up events, and theme-events.
-
-    The installations are concentrated in the city enter, but the outsides of the city are also involved, in places such as Bavnehøj, Sundby, Refshaleøen and Ørestad.
-
-    Walking, cycling and running routes have been developed that lead you straight to the installations. These vary in length, from 2,5 km-9 km.
-
-    Our app, which was downloaded 50.000 times last year, features light-themed treasure hunts with various prizes.
-  `}
+            items={[
+              "This is the 6th time the festival is being held.",
+              "In 2021, the festival attracted 500.000 visitors, which makes it the most visited festival in Denmark.",
+              "The festival features more than 55 installations, pop-up events, and theme-events.",
+              "The installations are concentrated in the city center, but the outskirts of the city are also involved, in places such as Bavnehøj, Sundby, Refshaleøen, and Ørestad.",
+              "Walking, cycling, and running routes have been developed that lead you straight to the installations. These vary in length, from 2.5 km to 9 km.",
+              "Our app, which was downloaded 50.000 times last year, features light-themed treasure hunts with various prizes.",
+            ]}
           />
 
           <InfoBox
             header="Sustainability"
-            text={`Maps are not printed, but our mobile app shows where all the installations are placed relative to your own location.
-Maps can also be printed via our homepage, and are visible also on the all the pylons set up around the city.
-During one day the festival's electricity usage correspond with 3 fully charged electric cars`}
+            items={[
+              "Maps are not printed, but our mobile app shows where all the installations are placed relative to your own location.",
+              "Maps can also be printed via our homepage, and are visible also on the all the pylons set up around the city.",
+              "During one day the festival's electricity usage correspond with 3 fully charged electric cars",
+            ]}
           />
         </div>
 
@@ -70,7 +62,8 @@ During one day the festival's electricity usage correspond with 3 fully charged 
         <!-- Drop down menu 2 -->
 
         <!--Sustainability  -->
-      </div>
+      
+    </div>
     </main>
   </body>
   <footer>FOOTER</footer>
