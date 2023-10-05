@@ -1,7 +1,7 @@
 ---
 const { header, items = [] } = Astro.props;
-
 ---
+
 <div class="info-box">
   <h4 class="facts_container toggle-info">
     {header}
@@ -9,27 +9,25 @@ const { header, items = [] } = Astro.props;
   </h4>
   <div class="info-content hidden">
     <ul>
-      {items.map((item, index) => (
-        <li key={index}>{item}</li>
-      ))}
+      {items.map((item, index) => <li key={index}>{item}</li>)}
     </ul>
   </div>
-  
 </div>
 
-
 <script>
-document.addEventListener("DOMContentLoaded", function () {
-  const toggleInfoElements = document.querySelectorAll(".toggle-info");
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleInfoElements = document.querySelectorAll(".toggle-info");
 
-  toggleInfoElements.forEach((factsToggle) => {
-    factsToggle.addEventListener("click", function () {
-      factsToggle.classList.toggle("clicked"); 
+    toggleInfoElements.forEach((factsToggle) => {
+      factsToggle.addEventListener("click", function () {
+        factsToggle.classList.toggle("clicked");
+      });
     });
   });
-});
 </script>
 
 <style>
- 
+  .facts_container {
+    cursor: pointer;
+  }
 </style>
