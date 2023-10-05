@@ -1,6 +1,16 @@
 ---
-import Nav from "../components/Nav.astro"
+import Nav from "../components/Nav.astro";
 import ProgramCard from "../components/ProgramCard.astro";
+const data = await fetch("https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_lighthouse",
+{
+	method: "GET",
+	headers: {
+		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmcmp2c2dicmdrdG9ycnhraXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNDgxOTUsImV4cCI6MjAxMTkyNDE5NX0.FZgFg8q1LZylUrKUOvO7aIbWt83tY4dKVuVyAKKgxVU"
+	},
+}
+).then((res) => res.json());
+
+console.log(data);
 ---
 
 <html lang="en">
@@ -61,3 +71,8 @@ import ProgramCard from "../components/ProgramCard.astro";
 		gap: 10px;
 	}
 </style>
+
+
+
+https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_lighthouse
+eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmcmp2c2dicmdrdG9ycnhraXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNDgxOTUsImV4cCI6MjAxMTkyNDE5NX0.FZgFg8q1LZylUrKUOvO7aIbWt83tY4dKVuVyAKKgxVU
