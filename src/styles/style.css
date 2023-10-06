@@ -5,6 +5,10 @@
   box-sizing: border-box;
 }
 
+main {
+  margin-bottom: 100px;
+}
+
 h1 {
 font-family: "termina", sans-serif;
 font-weight: 900;
