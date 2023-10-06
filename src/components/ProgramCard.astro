@@ -5,13 +5,14 @@ const { data } = Astro.props;
 ---
 <a href="event">
     <article class="program-card">
-        <img src=`imgs/${data.img_url}` alt="acid sun">
+        <img src=`imgs/${data.img_url}` alt="Lys intallation">
     </article>
 </a>
 
 <style>
     img {
-        width: 800px;
+        width: 100%;
+        max-height: 100%;
     }
 
     .program-card {
@@ -45,7 +46,7 @@ const { data } = Astro.props;
         color: rgb(254, 254, 254);
     }
 
-    @media(max-width:1800px){
+    /* @media(max-width:1800px){
         img, {
             width: 700px;
         }
@@ -113,5 +114,5 @@ const { data } = Astro.props;
         img {
             width: 150px;
         }
-    }
+    } */
 </style>

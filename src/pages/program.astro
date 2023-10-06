@@ -64,15 +64,16 @@ const data = await fetch("https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_l
 		text-align: center;
 	}
 	.program-grid {
-		display: flex;
-		flex-direction: column;
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 		justify-content: center;
 		align-items: center;
+		
 		gap: 10px;
 	}
 
-	.card-pair{
+	/* .card-pair{
 		display: flex;
 		gap: 10px;
-	}
+	} */
 </style>
