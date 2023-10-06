@@ -8,9 +8,10 @@ const data = await fetch("https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_l
 		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmcmp2c2dicmdrdG9ycnhraXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNDgxOTUsImV4cCI6MjAxMTkyNDE5NX0.FZgFg8q1LZylUrKUOvO7aIbWt83tY4dKVuVyAKKgxVU"
 	},
 }
-).then((res) => res.json());
+)
+.then((res) => res.json());
 
-console.log(data);
+//console.log(data);
 ---
 
 <html lang="en">
@@ -31,7 +32,10 @@ console.log(data);
 		</div>
 		<main>
 			<section class="program-grid">
-				<div class="card-pair">
+				{data.map((show) => {
+					return <ProgramCard data={show}/>;
+				})}
+				<!-- <div class="card-pair">
 					<ProgramCard />
 					<ProgramCard>
 				</div>
@@ -46,7 +50,7 @@ console.log(data);
 				<div class="card-pair">
 					<ProgramCard />
 					<ProgramCard />
-				</div>
+				</div> -->
 			</section>
 		</main>
 		<footer></footer>

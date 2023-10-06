@@ -1,9 +1,11 @@
 ---
 import "../styles/style.css";
+const { data } = Astro.props;
+//console.log(data);
 ---
 <a href="event">
     <article class="program-card">
-        <img src="/imgs/acidsun.webp" alt="acid sun">
+        <img src=`imgs/${data.img_url}` alt="acid sun">
     </article>
 </a>
 
