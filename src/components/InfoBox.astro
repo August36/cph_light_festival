@@ -5,7 +5,7 @@ const { header, items = [] } = Astro.props;
 <div class="info-box">
   <h4 class="facts_container toggle-info">
     {header}
-    <img src="/angle-small-down.png" class="arrow-icon" />
+    <img src="/arrowdown.svg" class="arrow-icon" />
   </h4>
   <div class="info-content hidden">
     <ul>
@@ -27,6 +27,12 @@ const { header, items = [] } = Astro.props;
 </script>
 
 <style>
+  img {
+    width: 22px;
+    height: auto;
+    margin-left: 10px;
+    
+  }
   .facts_container {
     cursor: pointer;
   }
