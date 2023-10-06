@@ -1,6 +1,7 @@
 ---
 import Nav from "../components/Nav.astro";
 import ProgramCard from "../components/ProgramCard.astro";
+import Footer from "../components/Footer.astro";
 const data = await fetch("https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_lighthouse",
 {
 	method: "GET",
@@ -53,7 +54,7 @@ const data = await fetch("https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_l
 				</div> -->
 			</section>
 		</main>
-		<footer></footer>
+		<Footer />
 	</body>
 </html>
 
