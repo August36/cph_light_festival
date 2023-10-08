@@ -1,0 +1,36 @@
+ <div class="billeder_fyld">
+<img src="/imgs/blueearth.webp" alt="" />
+<img src="/imgs/fragmentsofreality.webp" alt="" />
+<img src="/imgs/echo.webp" alt="" />
+</div>
+
+<style>
+  img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    opacity: 100%;
+  }
+
+  .billeder_fyld {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px; /* Add margin to separate from elements above */
+  }
+
+  @media (max-width: 768px) {
+    .billeder_fyld {
+      flex-direction: row; /* Display images in a column on mobile screens */
+      align-items: center; /* Center items horizontally on mobile screens */
+      margin-top: 160px; /* Remove top margin on smaller screens */
+    }
+
+    img {
+      margin-right: 10px; /* Remove margin between images on mobile screens */
+      margin-bottom: 0px; /* Add margin to separate images on mobile screens */
+      width: 140px;
+    }
+  }
+</style>
+
