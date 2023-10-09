@@ -16,4 +16,20 @@ export async function getStaticPaths() {
 }
 const {myData} = Astro.props
 console.log(myData);
+import MainLayout from "../../layouts/MainLayout.astro";
+import EventCard from "../../components/EventCard.astro"
 ---
+<MainLayout>
+  <EventCard
+  eventName={myData.event_name}
+  artistName={myData.artist_name}
+  eventInfo={myData.event_description}
+  artistInfo={myData.artist_information}
+  additionalInfo={myData.additional_information}
+  artistWebsite={myData.artist_website}
+  artistSoMe={myData.artist_SoMe}
+  credits={myData.credits}
+>
+<img style="max-width: 100%; height: auto;" src={`../imgs/${myData.img_url}`} alt="Art Installation">
+</EventCard>
+</Mainlayout>
