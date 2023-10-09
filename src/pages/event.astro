@@ -1,23 +1,9 @@
 ---
-import Nav from "../components/Nav.astro"
 import EventCard from "../components/EventCard.astro"
-import Footer from "../components/Footer.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://use.typekit.net/qzd2kga.css">
-		<title>Astro</title>
-	</head>
-	<body>
-		<header>
-			<Nav />
-		</header>
-		<main>
+<MainLayout>
 			<EventCard
 				eventName="Acid Sun"
 				artistName="Hans E. Madsen"
@@ -28,9 +14,6 @@ import Footer from "../components/Footer.astro";
 				artistSoMe="Instagram: hansemadsen"
 				credits="Thanks to The Danish Arts Foundation The Danish Art Workshops"
 			>
-			<img style="max-width: 100%; height: auto;" src="/imgs/acidsun.webp" alt="Acid Sun installation">
+			<img style="max-width: 100%; height: auto;" src="/imgs/acidsun.webp" alt="Art Installation">
 			</EventCard>
-		</main>
-		<Footer />
-	</body>
-</html>
+<MainLayout>

@@ -1,20 +1,8 @@
 ---
-import Nav from "../components/Nav.astro"
+import MainLayout from "../layouts/MainLayout.astro";
 ---
 
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<title>Astro</title>
-	</head>
-	<body>
-		<header>
-			<Nav />
-		</header>
-		<main>
+<MainLayout>
 			<section>
 			<h1>About:</h1>
 			<h2>Copenhagen Light Festival</h2>
@@ -120,7 +108,4 @@ import Nav from "../components/Nav.astro"
 			
 <p>Foreningen Københavns Lysfestival/Copenhagen Light Festival</p>
 	<p>Toldbodgade 39, 1253 København K · vat/cvr DK-40793232</p>
-		</main>
-		<footer></footer>
-	</body>
-</html>
+</MainLayout>
