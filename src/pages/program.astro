@@ -1,7 +1,6 @@
 ---
-import Nav from "../components/Nav.astro";
+import MainLayout from "../layouts/MainLayout.astro";
 import ProgramCard from "../components/ProgramCard.astro";
-import Footer from "../components/Footer.astro";
 const data = await fetch("https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_lighthouse",
 {
 	method: "GET",
@@ -11,35 +10,17 @@ const data = await fetch("https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_l
 }
 )
 .then((res) => res.json());
-
 ---
-
-<html lang="en">
-	<head>
-		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
-		<meta name="viewport" content="width=device-width" />
-		<meta name="generator" content={Astro.generator} />
-		<link rel="stylesheet" href="https://use.typekit.net/qzd2kga.css">
-		<title>Astro</title>
-	</head>
-	<body>
-		<header>
-			<Nav />
-		</header>
-		<div class="h2-container">
-			<h2>Program</h2>
-		</div>
-		<main>
-			<section class="program-grid">
-				{data.map((show) => {
-					return <ProgramCard data={show}/>;
-				})}
-			</section>
-		</main>
-		<Footer />
-	</body>
-</html>
+<MainLayout>
+<div class="h2-container">
+	<h2>Program</h2>
+</div>
+<section class="program-grid">
+	{data.map((show) => {
+		return <ProgramCard data={show}/>;
+	})}
+</section>
+</MainLayout>
 
 <style>
 	.h2-container{
