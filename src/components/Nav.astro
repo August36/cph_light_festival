@@ -3,129 +3,136 @@ import "../styles/style.css";
 ---
 
 <nav class="navbar">
-    <a class="logo" href="/#"><img class="logo" src="/imgs/logo.png" alt=""></a>
-    <ul class="nav-menu">
-        <li class="nav-item">
-            <a class="nav-link" href="/#">Home</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="../program">Program</a>
-        </li>
-        <li class="nav-item">
-            <a class="nav-link" href="about">About</a>
-        </li>
-    </ul>
-    <div class="burger">
-        <span class="bar"></span>
-        <span class="bar"></span>
-        <span class="bar"></span>
-    </div>
+  <a class="logo" href="/#"><img class="logo" src="/imgs/logo.png" alt="" /></a>
+  <ul class="nav-menu">
+    <li class="nav-item">
+      <a class="nav-link" href="/#">Home</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="../program">Program</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="about">About</a>
+    </li>
+  </ul>
+  <div class="burger">
+    <span class="bar"></span>
+    <span class="bar"></span>
+    <span class="bar"></span>
+  </div>
 </nav>
 
 <script>
-    const burger = document.querySelector(".burger");
-    const navMenu = document.querySelector(".nav-menu");
+  const burger = document.querySelector(".burger");
+  const navMenu = document.querySelector(".nav-menu");
 
-    burger.addEventListener("click", () => {
-        burger.classList.toggle("active");
-        navMenu.classList.toggle("active");
-    })
+  burger.addEventListener("click", () => {
+    burger.classList.toggle("active");
+    navMenu.classList.toggle("active");
+  });
 
-    document.querySelectorAll(".nav-link").forEach(navlink => navlink.
-    addEventListener("click", () => {
-        burger.classList.remove("active");
-        navMenu.classList.remove("active");
-    }))
+  function closeMenu() {
+    burger.classList.remove("active");
+    navMenu.classList.remove("active");
+  }
+
+  document
+    .querySelectorAll(".nav-link")
+    .forEach((navlink) => navlink.addEventListener("click", closeMenu));
+
+  window.addEventListener("scroll", closeMenu);
 </script>
 
 <style>
-    .logo{
-        width: 100px;
+  .logo {
+    width: 100px;
+  }
+
+  li {
+    list-style: none;
+  }
+
+  a {
+    color: #be3cdf;
+    text-decoration: none;
+  }
+
+  .navbar {
+    min-height: 70px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 24px;
+  }
+
+  .nav-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 60px;
+    z-index: 1000;
+    opacity: 80%;
+  }
+
+  .nav-link {
+    transition: 0.7s ease;
+  }
+
+  .nav-link:hover {
+    color: #ec9a3b;
+  }
+
+  .burger {
+    display: none;
+    cursor: pointer;
+  }
+
+  .bar {
+    display: block;
+    width: 25px;
+    height: 3px;
+    margin: 5px auto;
+    -webkit-transition: all 0.3s ease-in-out;
+    transition: all 0.3s ease-in-out;
+    background-color: white;
+  }
+
+  @media (max-width: 768px) {
+    .burger {
+      display: block;
     }
 
-    li{
-        list-style: none;
+    .burger.active .bar:nth-child(2) {
+      opacity: 0;
     }
 
-    a{
-        color: #BE3CDF;
-        text-decoration: none;
+    .burger.active .bar:nth-child(1) {
+      transform: translateY(8px) rotate(45deg);
     }
 
-    .navbar{
-        min-height: 70px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        padding:0 24px;
+    .burger.active .bar:nth-child(3) {
+      transform: translateY(-8px) rotate(-45deg);
     }
 
-    .nav-menu{
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        gap: 60px;
+    .nav-menu {
+      position: fixed;
+      left: 0;
+      top: 70px;
+      gap: 0;
+      flex-direction: column;
+      background-color: #141429;
+      width: 100%;
+      text-align: center;
+      transform: translateX(-100%);
+      transition: 0.3s;
     }
 
-    .nav-link{
-        transition: 0.7s ease;
+    .nav-item {
+      margin: 16px 0;
     }
 
-    .nav-link:hover{
-        color: #EC9A3B;
+    .nav-menu.active {
+      transform: translateX(0);
     }
-
-    .burger{
-        display: none;
-        cursor: pointer;
-    }
-
-    .bar{
-        display: block;
-        width: 25px;
-        height: 3px;
-        margin: 5px auto;
-        -webkit-transition: all 0.3s ease-in-out;
-        transition: all 0.3s ease-in-out;
-        background-color: white;
-    }
-
-    @media(max-width:768px){
-        .burger{
-            display: block;
-        }
-
-        .burger.active .bar:nth-child(2){
-            opacity: 0;
-        }
-
-        .burger.active .bar:nth-child(1){
-            transform: translateY(8px) rotate(45deg);
-        }
-
-        .burger.active .bar:nth-child(3){
-            transform: translateY(-8px) rotate(-45deg);
-        }
-
-        .nav-menu{
-            position: fixed;
-            left: -100%;
-            top: 70px;
-            gap: 0;
-            flex-direction: column;
-            background-color: #141429;
-            width: 100%;
-            text-align: center;
-            transition: 0.3s;
-        }
-
-        .nav-item{
-            margin: 16px 0;
-        }
-
-        .nav-menu.active{
-            left: 0;
-        }
-    }
-
+  }
 </style>
