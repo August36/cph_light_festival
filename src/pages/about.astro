@@ -1,10 +1,10 @@
 ---
-import Nav from "../components/Nav.astro"
-import Footer from "../components/Footer.astro"
-import "../styles/about.css"
-import CphLightFestTitle from "../components/CphLightFestTitle.astro"
-import InfoBox from "../components/InfoBox.astro"
+import MainLayout from "../layouts/MainLayout.astro";
+import InfoBox from "../components/InfoBox.astro";
 import InfoBoxAbout from "../components/InfoBoxAbout.astro"
+import Nav from "../components/Nav.astro"
+import Footer from "../components/Footer.astro";
+import CphLightFestTitle from "../components/CphLightFestTitle.astro"; 
 ---
 
 <html lang="en">
@@ -13,17 +13,18 @@ import InfoBoxAbout from "../components/InfoBoxAbout.astro"
 		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
+		<link rel="stylesheet" href="https://use.typekit.net/qzd2kga.css">
+		<link rel="stylesheet" href="/src/styles/about.css">
 		<title>Astro</title>
 	</head>
-	<body>
-		<header>
-			<Nav />
-		</header>
-		<main>
-			
+
+	<header>
+		<Nav />
+	</header>
+
 			<section class="center_text">
-				<h2>About:</h2>
-				<CphLightFestTitle />
+			<h1>About:</h1>
+			<CphLightFestTitle />
 			</section>
 			
 			<br>
@@ -38,6 +39,7 @@ import InfoBoxAbout from "../components/InfoBoxAbout.astro"
 					<br>
 					<p>The Copenhagen Light Festival brings together all the great forces – light artists and designers, students, organizations and commercial players – around a large non-profit project, that includes and enhances other February events as well</p>
 				</div>
+
 
 				<div>
 					<h2>What you can experience:</h2>
@@ -69,65 +71,89 @@ import InfoBoxAbout from "../components/InfoBoxAbout.astro"
 
 			<br>
 			
-			<section class="grid_1-1_about">
-				<h2>Contact us:</h2>
+<section class="grid_1-1_about">
 				<div>
-				<img src="mail icon" alt="mail icon">
-				<a href = "mailto:info@copenhagenlightfestival.org">
-					info@copenhagenlightfestival.org
-					</a>
-					<img src="phone icon" alt="phone icon">
-					<a href="tel:(+45) 25556604">(+45) 25556604</a>
+				<h2>Contact us:</h2>
+				<div><img src="mail icon" alt="mail icon">
+					<a href = "mailto:info@copenhagenlightfestival.org">
+						info@copenhagenlightfestival.org
+						</a></div>
+				<div><img src="phone icon" alt="phone icon">
+					<a href="tel:(+45) 25556604">(+45) 25556604</a></div>
 				</div>
 
 
 				<div>
-					<p>Dorte Burmester Wium
-						Sekretariatsleder – Head of secretariat Copenhagen Light Festival </p>					 
-					<img src="mail icon" alt="mail icon">
-					<a href = "mailto:dorte@copenhagenlightfestival.org">
-						dorte@copenhagenlightfestival.org
-						</a>
-						<img src="phone icon" alt="phone icon">
-					<a href="tel:(+45) 25 55 66 04">(+45) 25 55 66 04</a>
+					<p>Dorte Burmester Wium</p>
+					<br>
+						<p>Sekretariatsleder </p>
+						<p>Head of secretariat Copenhagen Light Festival </p>	
+
+						<div>
+						<div><img src="/imgs/mail_icon.png" alt="mail icon">
+							<a href = "mailto:dorte@copenhagenlightfestival.org">
+								dorte@copenhagenlightfestival.org
+								</a></div>
+						<div><img src="phone icon" alt="phone icon">
+							<a href="tel:(+45) 25 55 66 04">(+45) 25 55 66 04</a></div>
+						</div>
 					</div>
 
 					<div>
-						<p>Sofia Ivarsson
-							Programkoordinator / Program Coordinator </p>
-						<img src="mail icon" alt="mail icon">
-						<a href = "mailto:sofia@copenhagenlightfestival.org">
-							sofia@copenhagenlightfestival.org </a>
-							<img src="phone icon" alt="phone icon">
-				<p>CLF Office phone:</p>
-					<a href="tel:(+45) 25 55 66 05">(+45) 25 55 66 05</a>
+						<p>Sofia Ivarsson </p>
+							<p>Programkoordinator / Program Coordinator </p>
+							<div><img src="mail icon" alt="mail icon">
+								<a href = "mailto:sofia@copenhagenlightfestival.org">
+									sofia@copenhagenlightfestival.org </a></div>
+<br>
+						<div><img src="phone icon" alt="phone icon">
+							<p>CLF Office phone:</p>
+								<a href="tel:(+45) 25 55 66 05">(+45) 25 55 66 05</a></div>
+							
 						</div>
-</section>
+						
+<div>
 
-
-
-<InfoBoxAbout 
+						<div>
+						<InfoBoxAbout 
 header="Contact for press"
             items={[
               "Inquiries regarding press contact the secretariat",
               "info her - spørg jonas om href i astro",
 
-			  "If video and and stills are needed urgently please contact ",
-			  "ANDERS KONGSHAUG",
+			  "If video and and stills are needed urgently please contact ANDERS KONGSHAUG",
 			  "info her - spørg jonas om href i astro",
 
 			  "Venligst brug / Please use:",
 			  "info her - spørg jonas om href i astro"
-            ]}
-/>
+            ]}/>
+</div>
+
+<div>
+	<InfoBoxAbout 
+	header="Contact for artist"
+				items={[
+				  "Open Call for Copenhagen Light Festival", 
+	"Open Call is open and the deadline for submissions is 5th. june 23.59 danish time."
+				]}
+		
+	/>
+
+</div>
+
+</div>
+</section>
+
+
+
+
 
 <!--pørg jonas om href i astro -->
 <!-- indhold til contact for press nedenstående comment -->
 
 <!--
-<div>
-						<details>
-							<summary>Contact for press</summary>
+
+						
 							<p>Inquiries regarding press,
 								contact the secretariat </p>
 								<a href="tel:+ 45 25 55 66 04">Call: (+45) 25 55 66 04</a>
@@ -142,19 +168,10 @@ header="Contact for press"
 								<div><a href="https://www.tiktok.com/@copenhagenlightfestival">TikTok: @copenhagenlightfestival</a></div>
 								<div><a href="https://dk.linkedin.com/company/copenhagen-light-festival">Linkedin: @copenhagen light festival</a></div>
 								<div><a href="https://twitter.com/CphLightFest">Twitter: @CPH_Light_Fest #Copenhagen Light Festival</a></div>
-						</details>
-						</div>
+						
  -->
 
-<InfoBoxAbout 
-header="Contact for artist"
-            items={[
-              "Open Call for Copenhagen Light Festival", 
-"Open Call is open and the deadline for",
-"submissions is 5th. june 23.59 danish time."
-            ]}
-	
-/>
+
 
 
 			
@@ -166,8 +183,6 @@ header="Contact for artist"
 <!-- spørg jonas om hvordan jeg forlænger siden uden indhold eller hvordan jeg ændre infobox komponet til at vise hele boxen -->
 
 		</main>
-		<footer>
-			<Footer />
-		</footer>
-	</body>
-</html>
+<footer>
+   <Footer />
+</footer>
