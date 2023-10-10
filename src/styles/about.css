@@ -1,0 +1,33 @@
+.grid_1-1_about {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+  padding: 12px;
+}
+
+main {
+  box-sizing: border-box;
+  background-image: url("MESH 4.png");
+  background-size: cover;
+  background-position: center;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+}
+
+.center_text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+li {
+  font-family: "loos-wide", sans-serif;
+  font-weight: 100;
+  font-style: normal;
+  color: #e0ebf9;
+  font-size: 1.2rem;
+}
