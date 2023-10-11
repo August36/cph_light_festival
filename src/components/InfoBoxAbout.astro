@@ -1,18 +1,38 @@
 ---
-const { header, items = [] } = Astro.props;
+const { header, items, } = Astro.props;
 ---
 
-<div class="info-box">
+<div class="info-box-about">
   <h4 class="facts_container toggle-info">
     {header}
     <img src="/arrowdown.svg" class="arrow-icon" />
   </h4>
   <div class="info-content">
-    <ul>
-      {items.map((item, index) => <li key={index}>{item}</li>)}
-    </ul>
+    
+
+
+    <p>Inquiries regarding press,
+        contact the secretariat </p>
+        <div><a href="tel:+ 45 25 55 66 04">Call: (+45) 25 55 66 04</a></div>
+        <div> <a href = "mailto:info@copenhagenlightfestival.org">E-mail: info@copenhagenlightfestival.org</a></div>
+        <br>
+        <br>
+        <p>If video and and stills are needed urgently please contact </p>
+            <p>ANDERS KONGSHAUG Anders Kongshuag</p>
+            <a href = "mailto:anders@copenhagenlightfestival.org">E-mail: anders@copenhagenlightfestival.org</a>
+
+            <p>Venligst brug / Please use:</p>
+            <div><a href="https://www.instagram.com/cphlightfest/?hl=da">Instagram: @cphlightfest</a></div>
+            <div><a href="https://www.facebook.com/cphlightfest/?locale=da_DK">Facebook: @copenhagenlightfestival</a></div>
+            <div><a href="https://www.tiktok.com/@copenhagenlightfestival">TikTok: @copenhagenlightfestival</a></div>
+            <div><a href="https://dk.linkedin.com/company/copenhagen-light-festival">Linkedin: @copenhagen light festival</a></div>
+            <div><a href="https://twitter.com/CphLightFest">Twitter: @CPH_Light_Fest #Copenhagen Light Festival</a></div>
+
   </div>
+
 </div>
+
+
 
 
 <script>

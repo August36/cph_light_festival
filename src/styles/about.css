@@ -4,6 +4,8 @@
   grid-template-rows: 1fr;
   justify-content: space-around;
   padding: 12px;
+  margin: 12px;
+  gap: 50px;
 }
 
 main {
@@ -30,4 +32,25 @@ li {
   font-style: normal;
   color: #e0ebf9;
   font-size: 1.2rem;
+}
+
+h2 {
+  color: #575e88;
+}
+
+h3 {
+  color: #575e88;
+}
+
+.grid_1-1_about_contact {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  justify-content: space-around;
+  padding: 12px;
+  margin: 12px;
+  gap: 50px;
 }
