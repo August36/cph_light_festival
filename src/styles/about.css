@@ -24,6 +24,7 @@ main {
   align-items: center;
   justify-content: center;
   text-align: center;
+  gap: 20px;
 }
 
 li {
@@ -35,11 +36,11 @@ li {
 }
 
 h2 {
-  color: #575e88;
+  color: #aaaec7;
 }
 
 h3 {
-  color: #575e88;
+  color: #aaaec7;
 }
 
 .grid_1-1_about_contact {
@@ -53,4 +54,9 @@ h3 {
   padding: 12px;
   margin: 12px;
   gap: 50px;
+}
+
+a {
+  color: #be3cdf;
+  text-decoration: none;
 }
