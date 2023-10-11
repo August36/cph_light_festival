@@ -1,0 +1,81 @@
+---
+const { header, items = [] } = Astro.props;
+---
+
+<div class="info-box">
+  <h4 class="facts_container toggle-info">
+    {header}
+    <img src="/arrowdown.svg" class="arrow-icon" />
+  </h4>
+  <div class="info-content">
+    <ul>
+      {items.map((item, index) => <li key={index}>{item}</li>)}
+    </ul>
+  </div>
+</div>
+
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const toggleInfoElements = document.querySelectorAll(".toggle-info");
+
+    toggleInfoElements.forEach((factsToggle) => {
+      factsToggle.addEventListener("click", function () {
+        factsToggle.classList.toggle("clicked");
+      });
+    });
+  });
+</script>
+
+
+
+<style>
+  img {
+    width: 22px;
+    height: auto;
+    margin-left: 10px;
+  }
+  .facts_container {
+    cursor: pointer;
+    margin-top: 6px;
+  }
+  .info-content li {
+    font-size: 1.2rem;
+    margin: 10px;
+    list-style: disc; 
+  }
+
+  .info-box {
+    position: relative;
+  }
+
+  .info-content {
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 80%;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    padding: 10px 20px 10px 20px;
+    padding-left: 30px;
+    z-index: 100;
+    border-radius: 5px;
+    background-color: #575e88;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.3s ease;
+  }
+
+  .toggle-info.clicked + .info-content {
+    opacity: 1;
+    pointer-events: auto;
+  }
+
+    @media (max-width: 768px) {
+      .facts_container {
+        font-size: 1rem
+      }
+
+    }
+</style>
+
