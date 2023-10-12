@@ -1,0 +1,36 @@
+<div class="billeder_fyld">
+  <img src="/imgs/terra.webp" alt="" />
+  <img src="/imgs/treedance.webp" alt="" />
+  <img src="/imgs/waves.webp" alt="" />
+</div>
+
+<style>
+  img {
+    width: 200px;
+    height: auto;
+    margin-right: 20px;
+    opacity: 100%;
+  }
+
+  .billeder_fyld {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  @media (max-width: 768px) {
+    .billeder_fyld {
+      flex-direction: row;
+      align-items: center;
+      margin-top: 160px;
+    }
+
+    img {
+      margin-right: 10px;
+      margin-bottom: 0px;
+      width: 140px;
+    }
+  }
+</style>

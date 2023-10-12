@@ -4,8 +4,8 @@
   grid-template-rows: 1fr;
   justify-content: space-around;
   padding: 12px;
-  margin: 12px;
-  gap: 50px;
+  margin: 50px;
+  gap: 100px;
 }
 
 main {
@@ -16,6 +16,11 @@ main {
   margin: 0;
   padding: 0;
   overflow: hidden;
+  margin: 20px 100px;
+}
+
+body {
+  margin-bottom: 100px;
 }
 
 .center_text {
@@ -25,6 +30,7 @@ main {
   justify-content: center;
   text-align: center;
   gap: 20px;
+  
 }
 
 li {
@@ -47,7 +53,41 @@ h3 {
   display: grid;
   grid-template-columns: 1fr 1fr;
   grid-template-rows: 1fr;
-  display: flex;
+align-items: center;
+justify-content: center;
+text-align: center;
+  padding: 12px;
+  margin: 12px;
+  gap: 50px;
+}
+
+main a {
+  color: #be3cdf;
+  text-decoration: none;
+  font-family: "termina", sans-serif;
+font-weight: 700;
+font-style: normal;
+font-size: 1.6;
+}
+
+
+@media (max-width: 768px) {
+  
+    
+    .grid_1-1_about {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
+  justify-content: space-around;
+  padding: 12px;
+  margin: 50px;
+  gap: 50px;
+}
+
+.grid_1-1_about_contact {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr;
   justify-content: center;
   text-align: center;
   justify-content: space-around;
@@ -55,8 +95,5 @@ h3 {
   margin: 12px;
   gap: 50px;
 }
-
-a {
-  color: #be3cdf;
-  text-decoration: none;
-}
+   
+  }

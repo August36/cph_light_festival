@@ -1,5 +1,5 @@
 ---
-const { header, items, } = Astro.props;
+const { header, items } = Astro.props;
 ---
 
 <div class="info-box-about">
@@ -8,53 +8,46 @@ const { header, items, } = Astro.props;
     <img src="/arrowdown.svg" class="arrow-icon" />
   </h4>
   <div class="info-content">
-    
-<br>
-<br>
-
-    <h2>Inquiries regarding press,
-        contact the secretariat </h2>
-        <div><a href="tel:+ 45 25 55 66 04">Call: (+45) 25 55 66 04</a></div>
-        <br>
-        <div> <a href = "mailto:info@copenhagenlightfestival.org">E-mail: info@copenhagenlightfestival.org</a></div>
-        <br>
-        <br>
-        <p>If video and and stills are needed urgently please contact </p>
-            <p>ANDERS KONGSHAUG Anders Kongshuag</p>
-            <br>
-            <a href = "mailto:anders@copenhagenlightfestival.org">E-mail: anders@copenhagenlightfestival.org</a>
-
-            <br>
-            <br>
-
-            <p>Venligst brug / Please use:</p>
-            <br>
-            <div><a href="https://www.instagram.com/cphlightfest/?hl=da">Instagram: @cphlightfest</a></div>
-            <br>
-            <div><a href="https://www.facebook.com/cphlightfest/?locale=da_DK">Facebook: @copenhagenlightfestival</a></div>
-            <br>
-            <div><a href="https://www.tiktok.com/@copenhagenlightfestival">TikTok: @copenhagenlightfestival</a></div>
-            <br>
-            <div><a href="https://dk.linkedin.com/company/copenhagen-light-festival">Linkedin: @copenhagen light festival</a></div>
-            <br>
-            <div><a href="https://twitter.com/CphLightFest">Twitter: @CPH_Light_Fest #Copenhagen Light Festival</a></div>
-
-<br>
-<br>
-
-<h2>
-    Inquiries regarding Artist
-</h2>
-<p>Open Call for Copenhagen Light Festival</p>
-
-<p>Open Call is open and the deadline for submissions is 5th. june 23.59 danish time.</p>
-
+    <h2>Inquiries regarding press, contact the secretariat</h2>
+    <div><a href="tel:+45 25 55 66 04">Call: (+45) 25 55 66 04</a></div>
+    <div>
+      <a href="mailto:info@copenhagenlightfestival.org"
+        >E-mail: info@copenhagenlightfestival.org</a>
+    </div>
+    <p>If video and stills are needed urgently please contact</p>
+    <p>ANDERS KONGSHAUG Anders Kongshuag</p>
+    <a href="mailto:anders@copenhagenlightfestival.org"
+      >E-mail: anders@copenhagenlightfestival.org</a
+    >
+    <p>Venligst brug / Please use:</p>
+    <div>
+      <a href="https://www.instagram.com/cphlightfest/?hl=da"
+        >Instagram: @cphlightfest</a>
+    </div>
+    <div>
+      <a href="https://www.facebook.com/cphlightfest/?locale=da_DK"
+        >Facebook: @copenhagenlightfestival</a>
+    </div>
+    <div>
+      <a href="https://www.tiktok.com/@copenhagenlightfestival"
+        >TikTok: @copenhagenlightfestival</a>
+    </div>
+    <div>
+      <a href="https://dk.linkedin.com/company/copenhagen-light-festival"
+        >Linkedin: @copenhagen light festival</a>
+    </div>
+    <div>
+      <a href="https://twitter.com/CphLightFest"
+        >Twitter: @CPH_Light_Fest #Copenhagen Light Festival</a>
+    </div>
+    <h2>Inquiries regarding Artist</h2>
+    <p>Open Call for Copenhagen Light Festival</p>
+    <p>
+      Open Call is open, and the deadline for submissions is 5th June 23:59
+      Danish time.
+    </p>
   </div>
-
 </div>
-
-
-
 
 <script>
   document.addEventListener("DOMContentLoaded", function () {
@@ -68,56 +61,64 @@ const { header, items, } = Astro.props;
   });
 </script>
 
-
-
 <style>
   img {
     width: 22px;
     height: auto;
     margin-left: 10px;
   }
+
   .facts_container {
     cursor: pointer;
     margin-top: 6px;
   }
-  .info-content li {
-    font-size: 1.2rem;
-    margin: 10px;
-    list-style: disc; 
-  }
 
-  .info-box {
+  .info-box-about {
     position: relative;
+    text-align: center;
   }
-
 
   .info-content {
-    position: absolute;
-    top: 100%;
-    left: 0;
     width: 80%;
-    margin-top: 5px;
-    margin-bottom: 10px;
-    padding: 10px 20px 10px 20px;
-    padding-left: 30px;
+    margin: 0 auto;
+    padding: 20px;
     z-index: 100;
     border-radius: 5px;
     background-color: #575e88;
+    max-height: 0;
+    overflow: hidden;
     opacity: 0;
     pointer-events: none;
-    transition: opacity 0.3s ease;
+    transition:
+      max-height 0.3s ease,
+      opacity 0.3s ease,
+      padding 0.3s ease;
+    position: relative;
+  }
+
+  .info-content h2 {
+    margin-top: 20px;
+  }
+
+  .info-content p {
+    margin-bottom: 10px;
+  }
+
+  .info-content a {
+    display: block;
+    margin-bottom: 10px;
   }
 
   .toggle-info.clicked + .info-content {
+    max-height: 1200px;
     opacity: 1;
     pointer-events: auto;
+    padding: 10px 20px;
   }
 
-    @media (max-width: 768px) {
-      .facts_container {
-        font-size: 1rem
-      }
-
+  @media (max-width: 768px) {
+    .facts_container {
+      font-size: 1rem;
     }
+  }
 </style>
-
