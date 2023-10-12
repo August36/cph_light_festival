@@ -10,7 +10,7 @@
 
 main {
   box-sizing: border-box;
-  background-image: url("MESH4.png");
+  background-image: url("/MESH4.png");
   background-size: cover;
   background-position: center;
   margin: 0;
