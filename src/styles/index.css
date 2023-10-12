@@ -51,6 +51,21 @@ font-size: 1.6rem;
   grid-column: 2/6;
 }
 
+.looking_forward {
+  grid-column: 1 / 5; 
+}
+
+.looking_forward h5 {
+  color: #bbafa2;
+  font-size: 1.2rem;
+
+}
+
+.looking_forward span {
+  color: #EC9A3B;
+  font-weight: 800;
+
+}
 .laes_mere {
   margin: 0;
   grid-column: 4/6;
