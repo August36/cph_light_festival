@@ -1,45 +1,62 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import ProgramCard from "../components/ProgramCard.astro";
-const data = await fetch("https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_lighthouse",
-{
-	method: "GET",
-	headers: {
-		apikey: "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmcmp2c2dicmdrdG9ycnhraXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNDgxOTUsImV4cCI6MjAxMTkyNDE5NX0.FZgFg8q1LZylUrKUOvO7aIbWt83tY4dKVuVyAKKgxVU"
-	},
-}
-)
-.then((res) => res.json());
+const data = await fetch(
+  "https://efrjvsgbrgktorrxkiyp.supabase.co/rest/v1/cph_lighthouse",
+  {
+    method: "GET",
+    headers: {
+      apikey:
+        "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImVmcmp2c2dicmdrdG9ycnhraXlwIiwicm9sZSI6ImFub24iLCJpYXQiOjE2OTYzNDgxOTUsImV4cCI6MjAxMTkyNDE5NX0.FZgFg8q1LZylUrKUOvO7aIbWt83tY4dKVuVyAKKgxVU",
+    },
+  }
+).then((res) => res.json());
 ---
+
 <MainLayout>
-<div class="h2-container">
-	<h2>Program</h2>
-</div>
-<section class="program-grid">
-	{data.map((show) => {
-		return <ProgramCard data={show}/>;
-	})}
-</section>
+  <div class="h2-container">
+    <h1>Program</h1>
+    <h4>
+      A selection of our instalments and exhibitions throughout Copenhagen
+    </h4>
+  </div>
+  <section class="program-grid">
+    {
+      data.map((show) => {
+        return <ProgramCard data={show} />;
+      })
+    }
+  </section>
 </MainLayout>
 
 <style>
-	.h2-container{
-		margin: 20px 0 20px;
-		text-align: center;
-	}
-	.program-grid {
-		display: grid;
-		grid-template-columns: 1fr 1fr;
-		justify-content: center;
-		align-items: center;
-		margin: 0 100px;
-		
-		gap: 10px;
-	}
+  .h2-container {
+    margin: 20px 0 20px;
+    text-align: center;
+  }
+  .h2-container h4 {
+    color: #7e839e;
+    font-size: 1.2rem;
+  }
+  .program-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    align-items: center;
+    margin: 0 100px;
 
-	@media(max-width:700px){
-        .program-grid {
-			margin: 0 50px;
-        }
+    gap: 10px;
+  }
+
+  @media (max-width: 700px) {
+    .program-grid {
+      margin: 0 50px;
     }
+
+    .h2-container h4 {
+      color: #7e839e;
+      font-size: 1rem;
+      padding: 10px 50px;
+    }
+  }
 </style>

@@ -10,17 +10,17 @@
 
 main {
   box-sizing: border-box;
-  background-image: url("MESH 4.png");
+  background-image: url("MESH4.png");
   background-size: cover;
   background-position: center;
   margin: 0;
   padding: 0;
   overflow: hidden;
-  margin: 20px 100px;
+ 
 }
 
 body {
-  margin-bottom: 100px;
+ 
 }
 
 .center_text {
@@ -31,6 +31,17 @@ body {
   text-align: center;
   gap: 20px;
   
+}
+
+.center_text2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  gap: 20px;
+  
+margin-bottom: 100px;
 }
 
 li {
