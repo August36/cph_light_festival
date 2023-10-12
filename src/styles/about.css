@@ -8,11 +8,14 @@
   gap: 100px;
 }
 
+body {
+background-image: url("/MESH4.png");
+ background-size: cover;
+  background-position: center;
+}
+
 main {
   box-sizing: border-box;
-  background-image: url("/MESH4.png");
-  background-size: cover;
-  background-position: center;
   margin: 0;
   padding: 0;
   overflow: hidden;
