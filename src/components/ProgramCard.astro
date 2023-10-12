@@ -4,52 +4,68 @@ const { data } = Astro.props;
 //console.log(data);
 ---
 <a href={`/events/${data.slug}`}>
-    <article class="program-card">
-        <img src=`/imgs/${data.img_url}` alt="Lys intallation" loading="lazy">
-    </article>
+    <div class="program-card">
+        <div class="image-container">
+            <img src=`/imgs/${data.img_url}` alt="Lys installation" loading="lazy">
+        </div>
+        <div class="text-overlay">Click to read more about the event</div>
+    </div>
 </a>
 
-<style>
-    img {
-        width: 100%;
-        max-height: 100%;
-    }
+<style>img {
+    width: 100%;
+    max-height: 100%;
+}
 
-    .program-card {
-        text-align: center;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-around;
-        align-items: center;
-        position: relative;
-    }
+.program-card {
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    position: relative;
+    overflow: hidden; 
+}
 
-    .program-card:hover {
-        filter: brightness(45%);
-        cursor: pointer;
-    }
+.image-container {
+    position: relative;
+}
 
-    .program-card::before {
-        position: absolute;
-        top: center;
-        left: center;
-        background-color: rgb(0, 0, 0);
-        padding: 10px;
-        z-index: 1;
-        opacity: 0; 
-        transition: opacity 0.3s; 
-    }
+.image-container img {
+    transition: filter 0.3s;
+}
 
-    .program-card:hover::before {
-        content: "Click to read more about the event"; 
-        opacity: 1;
-        color: rgb(254, 254, 254);
-        font-family: "termina", sans-serif;
-        font-weight: 400;
-        font-style: normal;
-        color: #E0EBF9;
-        font-size: 1.2rem;
-    }
+.text-overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 1;
+    opacity: 0;
+    transition: opacity 0.3s;
+    background-color: rgba(0, 0, 0, 0.6); 
+    color: #fff; 
+    padding: 10px;
+    border-radius: 5px;
+    font-family: "termina", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.2rem;
+}
 
+.program-card:hover .text-overlay {
+    opacity: 1;
+}
+
+.program-card:hover .image-container img {
+    filter: brightness(45%);
+}
+
+@media (max-width: 700px) {
+    .text-overlay {
+        font-size: 0.8rem;
+        padding: 5px;
+    }
+}
 
 </style>
